@@ -1,0 +1,70 @@
+"""
+config.py - Configuración centralizada del sistema Karaoke Spotify
+Edita SOLO este archivo para ajustar credenciales y parámetros.
+"""
+
+# ─────────────────────────────────────────────
+#  CREDENCIALES SPOTIFY
+# ─────────────────────────────────────────────
+SPOTIPY_CLIENT_ID     = "TU_API_KEY_AQUI"
+SPOTIPY_CLIENT_SECRET = "TU_API_KEY_AQUI"
+SPOTIPY_REDIRECT_URI  = "TU_API_KEY_AQUI"
+SPOTIFY_SCOPE         = "user-modify-playback-state,user-read-playback-state"
+
+# Playlist/contexto de "modo especial" (opcional)
+URI_PLAYLIST_ESPECIAL = "spotify:playlist:TU_API_KEY_AQUI"
+# URI de la canción que se activa con el gesto 'amor'
+# Reemplaza con la URI real de Spotify: abre Spotify → clic derecho
+# en la canción → Compartir → Copiar enlace de canción
+URI_CANCION_AMOR = "spotify:track:TU_API_KEY_AQUI"
+
+# ─────────────────────────────────────────────
+#  CREDENCIALES GOOGLE GEMINI (AI Studio)
+# ─────────────────────────────────────────────
+GEMINI_API_KEY   = "TU_API_KEY_AQUI"
+GEMINI_MODEL     = "gemini-1.5-flash"          # modelo rápido y barato
+
+# ─────────────────────────────────────────────
+#  RUTAS
+# ─────────────────────────────────────────────
+LYRICS_CACHE_DIR      = "lyrics_cache"
+HAND_LANDMARKER_MODEL = "hand_landmarker.task"
+
+# ─────────────────────────────────────────────
+#  GESTOS - umbrales de detección
+# ─────────────────────────────────────────────
+GESTURE_COOLDOWN_S     = 2.5    # segundos mínimos entre comandos
+THUMB_RATIO            = 1.25   # ratio pulgar extendido
+FINGER_RATIO           = 1.55   # ratio dedos extendidos
+WRIST_ROT_DEADZONE     = 20     # grados mínimos para DJ-knob
+SMOOTH_ALPHA           = 0.25   # EMA para suavizado (menor = más suave)
+
+# ─────────────────────────────────────────────
+#  VISUALIZACIÓN
+# ─────────────────────────────────────────────
+KARAOKE_W = 1000
+KARAOKE_H = 680
+CAMERA_W  = 640
+CAMERA_H  = 480
+
+FONT_PATH  = "arial.ttf"        # si no existe usa default PIL
+FONT_SIZE_TITLE  = 28
+FONT_SIZE_ARTIST = 18
+FONT_SIZE_NORMAL = 22
+FONT_SIZE_ACTIVE = 32
+
+# Disco Light – intervalo en segundos para cambio de color de fondo
+DISCO_INTERVAL_S = 0.35
+
+# ─────────────────────────────────────────────
+#  SPOTIFY POLLING
+# ─────────────────────────────────────────────
+SPOTIFY_POLL_S = 1.5            # frecuencia de consulta al estado de Spotify
+
+# ─────────────────────────────────────────────
+#  MOTOR TFLITE – gestos semánticos
+# ─────────────────────────────────────────────
+TFLITE_MODEL_PATH  = "model_quant.tflite"
+TFLITE_LABELS_PATH = "labels.txt"
+ 
+

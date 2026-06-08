@@ -1,0 +1,5 @@
+# Archivos que deben ignorarse
+config.py
+.env
+__pycache__/
+*.pyc

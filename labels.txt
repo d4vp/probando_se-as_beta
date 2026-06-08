@@ -1,0 +1,3 @@
+0 tomar
+1 amor
+2 sin_gestos

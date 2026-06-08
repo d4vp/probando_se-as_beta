@@ -1,0 +1,12 @@
+# Karaoke Spotify – dependencias Python
+# Instala con: pip install -r requirements.txt
+
+spotipy>=2.23.0
+mediapipe>=0.10.0
+opencv-python>=4.9.0
+Pillow>=10.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# NO incluye lyricsgenius (eliminado intencionalmente)
+# google-generativeai es opcional; se usa la REST API directamente
